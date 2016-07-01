@@ -1,6 +1,6 @@
 #myCalculator
 
-A calculator of my making :).
+A calculator of my making :)
 
 ### Feedback
 
