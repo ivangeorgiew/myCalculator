@@ -58,7 +58,7 @@ $(document).ready(function() {
         operatorWasClicked = true;
       }
     }
-    else{
+    else if($(this).hasClass('minus') === true){
       store += '(' + value;
       $('.output').append(value);
     }
@@ -88,7 +88,7 @@ $(document).ready(function() {
   $('.dot').on('click', function(){
     var value = $(this).text();
 
-    if(store !== '' && dotWasClicked === false && !$('.output').text().slice(-1)){
+    if(store !== '' && dotWasClicked === false && $('.output').text().slice(-1) !== ')'){
       store += value;
       $('.output').append(value);
 
@@ -111,9 +111,11 @@ $(document).ready(function() {
         notEq = true;
     }
 
-    if(notEq){
+    if(notEq)
       store = store.slice(0, -1);
-    }
+
+    if($('.output').text().slice(0, 1) === '-')
+      store += ')'; 
 
     if(equalWasClicked === false){
       $('.output').empty().append(eval(store));

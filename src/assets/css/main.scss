@@ -90,3 +90,12 @@ html {
 .equal {
   background-color: darken($lime, 20%);
 }
+
+
+@media (max-width: 400px){
+  .calc--container{
+    margin: 0px auto;
+    box-shadow: none;
+    height: 100vh;
+  }
+}
