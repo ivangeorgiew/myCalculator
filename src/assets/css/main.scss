@@ -12,7 +12,6 @@ $lime: #01FF70;
 }
   
 html {
-  height: 100%;
   background: radial-gradient(circle, saturate($olive, 40%), darken($olive, 20%));
   text-align: center;
   color: white;
@@ -97,5 +96,19 @@ html {
     margin: 0px auto;
     box-shadow: none;
     height: 100vh;
+    width: 100vw;
+    border-radius: 0px;
+  }
+  .calc--grid{
+    width: 80%;
+  }
+  .store{
+    border-radius: 5px 5px 0px 0px;
+    width: 80%;
+  }
+  .output{
+    border-radius: 0px 0px 5px 5px;
+    margin-top: -2px;
+    width: 80%;
   }
 }
