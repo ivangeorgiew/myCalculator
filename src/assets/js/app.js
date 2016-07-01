@@ -68,7 +68,7 @@ $(document).ready(function() {
   $('.ans').on('click', function(){
     dotWasClicked = false;
 
-    if(ans !== '' && $('.output').is(':empty')){
+    if((ans !== '' && $('.output').is(':empty')) || equalWasClicked === true){
       operatorWasClicked = false;
       equalWasClicked = false;
 
@@ -76,7 +76,7 @@ $(document).ready(function() {
         ans = '(' + ans + ')';
       }
 
-      $('.output').append(ans);
+      $('.output').empty().append(ans);
       store += ans;
       //ans = '';
     }
@@ -113,7 +113,7 @@ $(document).ready(function() {
     if(notEq)
       store = store.slice(0, -1);
 
-    if($('.output').text().slice(0, 1) === '-')
+    if($('.output').text().slice(0, 1) === '-' && $('.output').text() !== ans.toString())
       store += ')'; 
 
     if(equalWasClicked === false){
