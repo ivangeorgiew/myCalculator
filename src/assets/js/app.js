@@ -10,7 +10,6 @@ $(document).ready(function() {
 
     $('.output').empty();
     store = '';
-    ans = '';
 
     $('.store').empty().append(store);
   });
@@ -35,7 +34,7 @@ $(document).ready(function() {
       equalWasClicked = false;
     }
     
-    if(ans === '' || $('.output').text() !== ans){
+    if(ans === '' || $('.output').text() !== ans.toString()){
       store += value;
       $('.output').append(value);
     }
