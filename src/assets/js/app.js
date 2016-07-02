@@ -78,9 +78,9 @@ $(document).ready(function() {
 
       $('.output').empty().append(ans);
       store += ans;
+
       if(ans.toString().includes('.'))
         dotWasClicked = true;
-      console.log(ans.toString().includes('.'));
     }
 
     $('.store').empty().append(store);
@@ -119,16 +119,19 @@ $(document).ready(function() {
       store += ')'; 
 
     if(equalWasClicked === false){
-      if(eval(store).toString() === 'Infinity')
+      if(eval(store).toString() === 'Infinity' || eval(store).toString() === '-Infinity' || eval(store).toString() === 'NaN'){
         $('.output').empty().append('NaN');
-      else
+        ans = '';
+        store = '';
+        equalWasClicked = true;
+      }
+      else{
         $('.output').empty().append(eval(store).toString());
-
-      ans = eval(store);
-      store = '';
-      equalWasClicked = true;
-          
-      $('.ans').trigger('click');
+        ans = eval(store);
+        store = '';
+        equalWasClicked = true;
+        $('.ans').trigger('click');
+      }
     }
     
     $('.store').empty().append(store);
