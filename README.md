@@ -9,7 +9,7 @@ code and maybe there are still some possibilities for a mistake.
 
 ### Installation
 
-I used my static-boilerplate repo to make the website.
+I used my [static-boilerplate](https://github.com/ivangeorgiew/static-boilerplate) repo to make the website.
 In case you want to install:
 
 1) `cd /*YOUR DIRECTORY*/`
