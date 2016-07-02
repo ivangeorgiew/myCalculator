@@ -66,9 +66,8 @@ $(document).ready(function() {
   });
 
   $('.ans').on('click', function(){
-    dotWasClicked = false;
-
     if((ans !== '' && $('.output').is(':empty')) || equalWasClicked === true){
+      dotWasClicked = false;
       operatorWasClicked = false;
       equalWasClicked = false;
 
