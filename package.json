@@ -1,7 +1,7 @@
 {
-  "name": "static-boilerplate",
+  "name": "myCalculator",
   "version": "1.0.0",
-  "description": "A boilerplate for the creation of static websites",
+  "description": "A calculator of my own making",
   "main": "gulpfile.js",
   "author": "Ivan Georgiev",
   "license": "MIT",
