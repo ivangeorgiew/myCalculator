@@ -78,7 +78,9 @@ $(document).ready(function() {
 
       $('.output').empty().append(ans);
       store += ans;
-      //ans = '';
+      if(ans.toString().includes('.'))
+        dotWasClicked = true;
+      console.log(ans.toString().includes('.'));
     }
 
     $('.store').empty().append(store);
@@ -117,20 +119,17 @@ $(document).ready(function() {
       store += ')'; 
 
     if(equalWasClicked === false){
-      if(eval(store).toString() === 'Infinity'){
+      if(eval(store).toString() === 'Infinity')
         $('.output').empty().append('NaN');
-        ans = eval(store);
-        store = '';
-        equalWasClicked = true;
-      }
-      else{
+      else
         $('.output').empty().append(eval(store).toString());
-        ans = eval(store);
-        store = '';
-        equalWasClicked = true;
-      }
+
+      ans = eval(store);
+      store = '';
+      equalWasClicked = true;
+          
+      $('.ans').trigger('click');
     }
-    
     
     $('.store').empty().append(store);
   });
