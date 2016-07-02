@@ -117,10 +117,18 @@ $(document).ready(function() {
       store += ')'; 
 
     if(equalWasClicked === false){
-      $('.output').empty().append(eval(store));
-      ans = eval(store);
-      store = '';
-      equalWasClicked = true;
+      if(eval(store).toString() === 'Infinity'){
+        $('.output').empty().append('NaN');
+        ans = eval(store);
+        store = '';
+        equalWasClicked = true;
+      }
+      else{
+        $('.output').empty().append(eval(store).toString());
+        ans = eval(store);
+        store = '';
+        equalWasClicked = true;
+      }
     }
     
     
