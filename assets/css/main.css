@@ -98,3 +98,8 @@ html {
     border-radius: 0px 0px 5px 5px;
     margin-top: -2px;
     width: 80%; } }
+
+@media (max-width: 350px) {
+  .button--default {
+    width: 55px;
+    height: 55px; } }
