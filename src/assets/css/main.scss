@@ -112,3 +112,10 @@ html {
     width: 80%;
   }
 }
+
+@media (max-width: 350px){
+  .button--default{
+    width: 55px;
+    height: 55px;
+  }
+}
