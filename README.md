@@ -2,6 +2,8 @@
 
 A calculator of my making :)
 
+View the calculator live at https://ivangeorgiew.github.io/myCalculator/
+
 ### Feedback
 
 **Feedback** is much **appreciated** since it was really hard to come up with the
